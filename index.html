@@ -9,7 +9,7 @@
         body {
             font-family: 'Roboto', sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+           : #f4f4f4;
             padding: 20px;
             margin: 0;
         }
@@ -21,11 +21,13 @@
             font-size: 24px;
             font-weight: bold;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-in-out;
         }
 
         h1, h2 {
             color: #333;
             margin-bottom: 10px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .container {
@@ -48,6 +50,7 @@
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             opacity: 0;
             animation: fadeIn 1s ease-in-out forwards;
+            loading: lazy; /* Lazy loading */
         }
 
         img:hover {
@@ -58,6 +61,11 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
         }
 
         .whatsapp-button {
@@ -84,6 +92,8 @@
             height: 40px;
         }
     </style>
+    <meta name="description" content="Galería de GifPrise - Desayuno Sorpresa">
+    <meta name="keywords" content="Galería, GifPrise, Desayuno, Sorpresa, Imágenes">
 </head>
 <body>
     <header>
